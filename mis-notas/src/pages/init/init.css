@@ -1,0 +1,98 @@
+* {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    ;
+}
+
+.init-container {
+    /* background-color: blue; */
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.btns-conteiner {
+    background-color: #e4b86632;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 51%;
+    width: 97%;
+    max-width: 516px;
+    gap: 42px;
+    border-radius: 10px;
+}
+
+.btn-init,
+.btn-register,
+.btn-google {
+    width: 93%;
+    max-width: 50vh;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+    box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+}
+
+.btn-init {
+    background-color: #F39C12;
+    color: white;
+
+}
+
+.btn-register {
+    background-color: #60481E;
+    color: white;
+}
+
+.btn-google {
+    background-color: white;
+}
+
+
+
+/* @media (min-width:750px) {
+    .btns-conteiner {
+        /* max-width: 57vh; */
+        /* max-width: 36%; */
+    /* } */
+/* }  */
+
+@media (min-width:1366px) {
+    /* .btns-conteiner {
+        max-width: 36%;
+        /* height: 58vh; */
+        /* gap: 7%; */
+        /* padding: 0px; */
+        /* margin-bottom: 10px;
+        padding-bottom: 28px; */
+        
+    /* }  */
+
+    .welcome {
+        font-size: 2rem;
+        margin: 5px 0px 20px 0px;
+    }
+
+    .btn-init,
+    .btn-register,
+    .btn-google {
+        max-width: 90%;
+    }
+
+}

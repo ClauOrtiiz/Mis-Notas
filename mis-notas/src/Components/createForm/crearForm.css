@@ -1,0 +1,87 @@
+.login-form {
+    background-color: #e4b86632;
+    width: 88%;
+    max-width: 516px;
+    padding: 35px 20px 44px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+}
+
+#messageError {
+    font-size: 1.2rem;
+    color: rgb(144 0 0);
+    font-weight: bold;
+    height: 58px;
+    width:89%;
+    max-width: 50vh;
+    display: flex;
+    padding: 0 20px;
+    margin: 12px 0 7px 0;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+}
+
+.activate {
+    background-color: rgba(255, 0, 0, 0.123);
+    border-radius: 18px;
+}
+
+.inp,
+.btn {
+    width: 100%;
+    max-width:34vh;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+    box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25);
+
+}
+
+.btn {
+    background-color: #F39C12;
+    font-weight: bold;
+    margin: 0 auto;
+    color: white;
+}
+
+.inp::placeholder {
+    color: rgb(130, 126, 126);
+}
+
+.bottomTextLogin {
+    position: absolute;
+    top: 89%;
+    width: 174%;
+    max-width: 405px;
+    height: 45px;
+    border: none;
+    color: black;
+    font-size: 21px;
+    background: none;
+    font-weight: bold;
+}
