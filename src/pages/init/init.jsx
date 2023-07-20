@@ -5,6 +5,7 @@ import LogoMisNotas from '../../Components/logo/logo.jsx';
 import firebase from '../../firebase-client/auth.jsx';
 
 const init = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
     const handleClickInit = () => {
         navigate('/login')

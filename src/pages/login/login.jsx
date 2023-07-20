@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../../Components/logo/logo';
-import CreateForm from '../../Components/createForm/createForm';
+import LoginForm from '../../Components/loginForm/loginForm';
 import firebase from '../../firebase-client/auth';
-import '../login/login.css'
+import './login.css'
 
-const Register = () => {
+const Login = () => {
 
     const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ const Register = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [isActive, setIsActive] = useState(false);
 
-    const handleRegister = async (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         setIsActive(true);
 
@@ -22,13 +22,12 @@ const Register = () => {
             setErrorMessage('* These fields are required');
             return;
         }
-
         try {
-            await firebase().createUser(email, password);
+            await firebase().signIn(email, password);
             try {
                 navigate('/misNotas')
 
-            } catch(err) {
+            } catch (err) {
                 err
             }
 
@@ -44,21 +43,24 @@ const Register = () => {
     return (
         <section className="global-container">
             <Logo />
-            <CreateForm
-                isActive={isActive} 
-                email={email}
-                password={password}
-                setEmail={setEmail}
-                setPassword={setPassword}
-                errorMessage={errorMessage}
-                handleLogin={handleRegister}
-            />
+            <main>
+                <LoginForm
+                    isActive={isActive}
+                    email={email}
+                    password={password}
+                    setEmail={setEmail}
+                    setPassword={setPassword}
+                    errorMessage={errorMessage}
+                    handleLogin={handleLogin}
+                />
+            </main>
+
         </section>
     );
 
 };
 
-export default Register;
+export default Login;
 
 
 

@@ -1,0 +1,17 @@
+.box-logout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.out {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.text-out {
+    color: #fff;
+    font-size: 1.2rem;
+}

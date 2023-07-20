@@ -1,8 +1,12 @@
 import './crearForm.css'
 import { useNavigate } from 'react-router-dom';
+import Bnt from '../../Components/button/labelBnt'
 
-// eslint-disable-next-line react/prop-types
+
+
 const createForm = ({ email, password, setEmail, setPassword, errorMessage, handleLogin, isActive, text }) => {
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
     const handleClickLogin = () => {
         navigate('/login')
@@ -12,27 +16,23 @@ const createForm = ({ email, password, setEmail, setPassword, errorMessage, hand
             <h2>Crear cuenta </h2>
             <form className="login-form">
 
-                <div className="group">
-                    {/* <label htmlFor=""> </label> */}
-                    <input
-                        data-testid="email"
-                        className="inp"
-                        id="email"
-                        placeholder="example@example.com"
-                        type="email"
-                        name="email"
+            <div className="group">
+                    <Bnt
+                        textLabel='Correo'
+                        onChange={setEmail}
+                        textPlaceholder='ejemplo@ejemplo.com'
+                        typeInp='text'
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        textId ='email'
                     />
-                    <input
-                        data-testid="password"
-                        className="inp"
-                        id="password"
-                        placeholder="*********"
-                        type="password"
-                        name="password"
+
+                    <Bnt
+                        textLabel='Contraseña'
+                        onChange={setPassword}
+                        textPlaceholder='**********'
+                        typeInp='password'
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        textId = 'password'
                     />
                 </div>
                 <p id="messageError" data-testid="message-Error" className={`messageError ${isActive && 'activate'}`} >{errorMessage}</p>
