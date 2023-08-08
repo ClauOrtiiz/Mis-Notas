@@ -1,12 +1,11 @@
 .content-logo{
-    width: 200px;
-    margin: 0 auto;
+    width: 28%;
+    max-width: 419px;
     display: flex;
+    margin: 55px 30px 30px 30px;
     justify-content: center;
-    margin-top: -97px;
 }
 
 .content-logo img{
     width: 192%;
-    /* max-width: 450px; */
 }

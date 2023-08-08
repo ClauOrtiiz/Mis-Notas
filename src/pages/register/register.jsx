@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Logo from '../../Components/logo/logo';
 import CreateForm from '../../Components/createForm/createForm';
 import firebase from '../../firebase-client/auth';
-import '../login/login.css'
+import './register.css'
 
 const Register = () => {
 
@@ -38,11 +38,15 @@ const Register = () => {
         }
     };
 
+    //navegar
+    const handleClickLogin = () => {
+        navigate('/')
+    }
 
     return (
-        <section className="global-container">
+        <section className='register-container'>
             <Logo />
-            <main>
+            <p className='register-text'>Crear cuenta </p>
                 <CreateForm
                     isActive={isActive}
                     email={email}
@@ -52,8 +56,10 @@ const Register = () => {
                     errorMessage={errorMessage}
                     handleLogin={handleRegister}
                 />
-            </main>
 
+            <footer className='footer-btn'>
+                <button className='btn-init' onClick={handleClickLogin} >¿Ya tienes una cuenta? Iniciar Sesión </button>
+            </footer>
         </section>
     );
 

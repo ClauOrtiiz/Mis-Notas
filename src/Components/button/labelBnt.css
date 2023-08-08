@@ -1,0 +1,27 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 96%;
+}
+
+label,
+.inp-class,
+#messageError {    
+    font-size: 1.1rem;
+}
+
+.inp-class {
+    background-color: #ECECEC;
+    height: 45px;
+    width: 100%;
+    padding: 0px 0px 0px 17px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+}
+
+#messageError {
+    color: rgb(211, 0, 0);
+    font-style: oblique;
+}

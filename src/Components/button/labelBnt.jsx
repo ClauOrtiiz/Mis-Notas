@@ -1,11 +1,13 @@
-import './bnt.css'
+import './labelBnt.css'
 
 // eslint-disable-next-line react/prop-types
 const bnt = ({ textLabel, onChange, textPlaceholder, typeInp, value, textId }) => {
 
     return (
-        <div className='container-bnt'>
-            <label htmlFor="email"> {textLabel} </label>
+        <section className='input-group'>
+            <div className='input-div-label'>
+            <label htmlFor={textId}> {textLabel} </label>
+            </div>
             <input
                 className="inp-class"
                 id={textId}
@@ -16,7 +18,7 @@ const bnt = ({ textLabel, onChange, textPlaceholder, typeInp, value, textId }) =
                 onChange={(e) => onChange(e.target.value)}
             />
 
-        </div>
+        </section>
 
     );
 };
