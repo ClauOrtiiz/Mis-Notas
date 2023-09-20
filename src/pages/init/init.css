@@ -1,12 +1,5 @@
-* {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    margin: 0;
-}
-
-
 .init-container {
     background-image: url(src/assets/fondo.png);
-    /* background-color: #3F3B51; */
     height: 100vh;
     display: flex;
     background-size: cover;
@@ -14,22 +7,12 @@
     align-items: center;
 }
 
-.init-text {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 27px;
-    margin-top: 50px
-}
-
 .footer-btn {
     display: flex;
-    flex-direction: column;
-    margin-top: 60px;
+    margin-top: 40px;
     align-items: center;
     width: 80%;
     max-width: 450px;
-
 }
 
 .footer-bt-text {
@@ -39,17 +22,29 @@
 }
 
 .btn-register {
-    background-color: white;
+    background: none;
     font-weight: bold;
-    width: 100%;
+    text-decoration: underline;
     padding: 10px;
-    box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: white;
+    font-size: 1.4rem;
 }
 
 
+/* Bajo 448px el boton de navegación esta en dos lineas */
+@media (max-width: 449px) {
+    .footer-btn {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Cambia fondo desde 927px en adelante */
 @media (min-width: 926px) {
 
     .init-container {
         background-image: url(src/assets/desktop.png);
     }
+    
 }

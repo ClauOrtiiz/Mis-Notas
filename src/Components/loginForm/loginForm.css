@@ -1,34 +1,53 @@
 .loginform-conteiner {
-    background-color: #FBFBFB;
-    width: 80%;
-    max-width: 450px;
-    padding: 35px 20px 30px;
+    overflow: hidden;
+    background-color: #fbfbfb;
+    width: 89%;
+    max-width: 797px;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    margin-top: 10px;
 }
 
 .loginform-form {
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 8px;
+    width: 100%;
+    padding: 20px 30px;
 }
-
+.init-text {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: center;
+}
 .btn-google {
     background-color: #26CD91;
+    padding: 5px;
+    margin-top: 8px;
 }
 
 .btn-ingresar {
     background-color: #FFC24C;
-    margin-top: 6px;
+    /* margin-top: 12px; */
+    padding: 8px;
+    margin-top: 22px;
 }
 
-.btn-ingresar, .btn-google, .btn-register  {
+.img-desktop {
+    width: 39%;
+}
+
+.btn-ingresar,
+.btn-google {
     height: 45px;
     width: 100%;
-    border-radius: 18px;
+    border-radius: 14px;
     font-size: 1.2rem;
-    margin-top: 20px;
     outline: none;
     border: none;
     display: flex;
@@ -40,9 +59,12 @@
 }
 
 
-@media (min-width: 926px) {
 
-    .loginform-conteiner {
-        padding: 35px 60px 45px;
+
+@media (max-width: 925px) {
+
+    .img-desktop {
+        display: none;
+
     }
 }

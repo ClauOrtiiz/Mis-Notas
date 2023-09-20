@@ -1,5 +1,60 @@
-/* .g-container {
-    height: 100vh;
+.g-container {
+    background-image: url(src/assets/fondo.png);
+    /* background-color: #3F3B51; */
+    /* height: 100vh; */
+    display: flex;
+    background-size:cover;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cotainer-logout {
+    width: 100%;
     display: flex;
     flex-direction: column;
-} */
+    align-items: flex-end;
+}
+
+.buttonAdd-container {
+    position: relative;
+    width: 94%;
+    max-width: 1600px;
+    height: 3%;
+    max-height: 87px;
+}
+
+
+.buttonAdd {
+    position: absolute;
+    top: 659px;
+    right: -1px;
+    background-color: #FFC24C;
+    border: none;
+    border-radius: 32%;
+    box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25);
+    padding: 22px;
+}
+
+
+/* Cambia fondo desde 927px en adelante */
+@media (min-width: 926px) {
+
+    .g-container {
+        background-image: url(../../assets/desktop.png);
+        width: 100%;
+    }
+
+    .buttonAdd-container {
+        position: relative;
+        width: 94%;
+        max-width: 1600px;
+        height: 3%;
+        max-height: 87px;
+    }
+    
+    .buttonAdd {
+        right: 7px;
+        top: 464px;
+        padding: 29px;
+    }
+}

@@ -19,7 +19,7 @@ const Register = () => {
         setIsActive(true);
 
         if (email.trim() === '' || password.trim() === '') {
-            setErrorMessage('* These fields are required');
+            setErrorMessage('* Estos campos son obligatorios');
             return;
         }
 
@@ -46,19 +46,19 @@ const Register = () => {
     return (
         <section className='register-container'>
             <Logo />
-            <p className='register-text'>Crear cuenta </p>
-                <CreateForm
-                    isActive={isActive}
-                    email={email}
-                    password={password}
-                    setEmail={setEmail}
-                    setPassword={setPassword}
-                    errorMessage={errorMessage}
-                    handleLogin={handleRegister}
-                />
+            <CreateForm
+                isActive={isActive}
+                email={email}
+                password={password}
+                setEmail={setEmail}
+                setPassword={setPassword}
+                errorMessage={errorMessage}
+                handleLogin={handleRegister}
+            />
 
             <footer className='footer-btn'>
-                <button className='btn-init' onClick={handleClickLogin} >¿Ya tienes una cuenta? Iniciar Sesión </button>
+                <p className='footer-bntInit-text'>¿Ya tienes una cuenta?</p>
+                <button className='btn-init' onClick={handleClickLogin}> Iniciar Sesión </button>
             </footer>
         </section>
     );

@@ -8,17 +8,14 @@
     align-items: center;
 }
 
-.register-text {
-    color: white;
-    font-size: 1.5rem;
+.footer-bntInit-text{
+    font-size: 1.3rem;
     font-weight: bold;
-    margin-bottom: 27px;
-    margin-top: 50px
+    color: white;
 }
 
 .footer-btn {
     display: flex;
-    flex-direction: column;
     margin-top: 67px;
     align-items: center;
     width: 80%;
@@ -26,16 +23,24 @@
 }
 
 .btn-init {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    border: none;
     background: none;
-    width: 108%
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
 }
 
+/* Bajo 448px el boton de navegación esta en dos lineas */
+@media (max-width: 449px) {
+    .footer-btn {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
-
+/* Cambia fondo desde 927px en adelante */
 @media (min-width: 926px) {
 
     .register-container {
