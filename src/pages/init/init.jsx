@@ -9,38 +9,34 @@ import LoginForm from '../../Components/loginForm/loginForm';
 
 const init = () => {
     const navigate = useNavigate();
-    // const handleClickInit = () => {
-    //     navigate('/login')
-    // }
 
-//ingresa con cuenta ya existente
-const [email, setEmail] = useState('');
-const [password, setPassword] = useState('');
-const [errorMessage, setErrorMessage] = useState('');
-const [isActive, setIsActive] = useState(false);
+    //ingresa con cuenta ya existente
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [isActive, setIsActive] = useState(false);
 
-const handleLogin = async (e) => {
-    e.preventDefault();
-    setIsActive(true);
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        setIsActive(true);
 
-    if (email.trim() === '' || password.trim() === '') {
-        setErrorMessage('* These fields are required');
-        return;
-    }
-    try {
-        await firebase().signIn(email, password);
+        if (email.trim() === '' || password.trim() === '') {
+            setErrorMessage('* Estos campos son obligatorios');
+            return;
+        }
         try {
-            navigate('/misNotas')
+            await firebase().signIn(email, password);
+            try {
+                navigate('/misNotas')
+
+            } catch (err) {
+                err
+            }
 
         } catch (err) {
-            err
+            setErrorMessage('Ups, algo salio mal. Vuelva a intentarlo.');
         }
-
-    } catch (err) {
-        // console.log(err)
-        setErrorMessage('Oops, it is incorrect. Please try again');
-    }
-};
+    };
 
     //navegar a register
     const handleClickRegister = () => {
@@ -57,15 +53,14 @@ const handleLogin = async (e) => {
     return (
         <section className='init-container'>
             <LogoMisNotas></LogoMisNotas>
-            <p className='init-text'> Inicia sesión</p>
             <LoginForm isActive={isActive}
-                    email={email}
-                    password={password}
-                    setEmail={setEmail}
-                    setPassword={setPassword}
-                    errorMessage={errorMessage}
-                    handleLogin={handleLogin}
-                    handleClickGoogle={handleClickGoogle} ></LoginForm>
+                email={email}
+                password={password}
+                setEmail={setEmail}
+                setPassword={setPassword}
+                errorMessage={errorMessage}
+                handleLogin={handleLogin}
+                handleClickGoogle={handleClickGoogle} ></LoginForm>
 
             <footer className='footer-btn' >
                 <p className='footer-bt-text'>¿No tienes una cuenta?</p>

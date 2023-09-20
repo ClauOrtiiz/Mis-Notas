@@ -1,0 +1,86 @@
+.card-notes {
+    width: 80%;
+    max-width: 446px;
+    display: grid;
+    row-gap: 10px;
+}
+
+.card-notes-container {
+    font-size: 25px;
+    margin-bottom: 20px;
+    display: grid;
+    row-gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 7px;
+    box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25);
+}
+.card-notes-container:hover {
+    color: orange;
+}
+.container-btns {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0px;
+    gap: 2px;
+}
+
+.btn-edit {
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 15%;
+    border-radius: 10px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    /* font-size: 1.2rem; */
+    /* font-weight: bold; */
+    /* box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25); */
+}
+
+.btn-delete {
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 12%;
+    border-radius: 10px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    /* font-size: 1.2rem; */
+    /* font-weight: bold; */
+    /* box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25); */
+}
+
+.card-notes-title {
+    font-weight: bold;
+}
+
+.card-notes-text {
+    font-size: 1.35rem;
+}
+
+@media (min-width: 498px) {
+    .card-notes {
+        width: 57%;
+        
+    }
+        .btn-edit {
+        width: 40px;
+    }
+
+    .btn-delete {
+        width: 60px;
+    }
+
+    .card-notes-container {
+        display: grid;
+        row-gap: 0px;}
+}

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { signOut, getAuth } from 'firebase/auth';
 import { app } from '../../firebase-client/firebase';
-import out from '../../assets/salir.png';
+import Exit from '../../assets/exit.png';
 import './logout.css'
 
 const Logout = () => {
@@ -17,9 +17,9 @@ const Logout = () => {
 
     return (
 
-            <div className='box-logout' onClick={handleClicklogout}>
-                <img src={out} className='out' alt="logo" />
-                <p className='text-out'>Salir</p>
+            <div className='logout-container' onClick={handleClicklogout}>
+                <img src={Exit} className='logout-img' alt="logo" />
+                <p className='logout-text'>Salir</p>
             </div>
     );
 };

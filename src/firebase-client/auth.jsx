@@ -1,12 +1,10 @@
-import {collection, query, addDoc} from 'firebase/firestore'
+import { collection, query, addDoc, doc, updateDoc } from 'firebase/firestore'
 // updateDoc, doc, deleteDoc,  
 import { signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from './firebase';
 
 
 const firebase = () => {
-
-
 
     /* Ingresar con Google */
     const provider = new GoogleAuthProvider();
@@ -18,31 +16,39 @@ const firebase = () => {
     /* Ingreso con email y password */
     const signIn = (email, password) => signInWithEmailAndPassword(auth, email, password);
 
+    // ------------------------------------------------------
+
     const ref = () => query(collection(db, 'posts'));
+    // Leer post
+    const colPost = () => collection(db, 'posts');
 
     // crear post
-    const post = async (postText) => {
-        console.log({  text: postText,
-            userEmail: auth.currentUser.email,
-            likes: [],});
-        await addDoc(colPost, {
-            text: postText,
-            userEmail: auth.currentUser.email,
-            likes: [],
-        });
+    const post = (postText) => {
+        //  Comprobar si el usuario está autenticado
+        if (auth.currentUser) {
+            const userEmail = auth.currentUser.email;
+            addDoc(colPost(), {
+                title: postText.title,
+                text: postText.text,
+                userEmail: auth.currentUser.email,
+                date: new Date().toLocaleString(),
+            });
+
+            console.log("Documento agregado con éxito.", userEmail);
+        } else {
+            console.log("El usuario no está autenticado. No se puede publicar el post.");
+        }
     };
 
-        // Leer post
-        const colPost = collection(db, 'posts');
-        
     // // Editar post
 
-    // const editPost = (id, text) => {
-    //     const postRef = doc(db, 'posts', `${id}`);
-    //     updateDoc(postRef, {
-    //         text,
-    //     });
-    // };
+    const editNote = (id, postText) => {
+        const postRef = doc(db, 'posts', `${id}`);
+        updateDoc(postRef, {
+            title: postText.title,
+            text: postText.text,
+        });
+    };
 
     // // Eliminar post
 
@@ -74,7 +80,8 @@ const firebase = () => {
         signIn,
         ref,
         post,
-        // editPost,
+        colPost,
+        editNote
         // deleteDocData,
         // like,
         // disLike
