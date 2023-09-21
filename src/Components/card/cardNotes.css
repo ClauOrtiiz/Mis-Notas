@@ -1,7 +1,8 @@
 .card-notes {
     width: 80%;
-    max-width: 446px;
-    display: grid;
+    max-width: 537px;
+    display: flex;
+    flex-direction: column;
     row-gap: 10px;
 }
 
@@ -15,9 +16,11 @@
     padding: 7px;
     box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25);
 }
+
 .card-notes-container:hover {
     color: orange;
 }
+
 .container-btns {
     display: flex;
     justify-content: flex-end;
@@ -36,10 +39,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: 10px; */
-    /* font-size: 1.2rem; */
-    /* font-weight: bold; */
-    /* box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25); */
 }
 
 .btn-delete {
@@ -53,10 +52,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: 10px; */
-    /* font-size: 1.2rem; */
-    /* font-weight: bold; */
-    /* box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25); */
 }
 
 .card-notes-title {
@@ -66,13 +61,15 @@
 .card-notes-text {
     font-size: 1.35rem;
 }
-
+/* Cambia desde 498px en adelante */
 @media (min-width: 498px) {
     .card-notes {
-        width: 57%;
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
     }
-        .btn-edit {
+    .btn-edit {
         width: 40px;
     }
 
@@ -80,7 +77,5 @@
         width: 60px;
     }
 
-    .card-notes-container {
-        display: grid;
-        row-gap: 0px;}
+
 }

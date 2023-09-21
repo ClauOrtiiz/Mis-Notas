@@ -1,11 +1,11 @@
 .g-container {
     background-image: url(src/assets/fondo.png);
-    /* background-color: #3F3B51; */
-    /* height: 100vh; */
+    min-height: 100vh;
     display: flex;
     background-size:cover;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
 }
 
 .cotainer-logout {
@@ -25,9 +25,9 @@
 
 
 .buttonAdd {
-    position: absolute;
-    top: 659px;
-    right: -1px;
+    position: fixed;
+    top: 87%;
+    right: 4%;
     background-color: #FFC24C;
     border: none;
     border-radius: 32%;
@@ -52,9 +52,22 @@
         max-height: 87px;
     }
     
-    .buttonAdd {
-        right: 7px;
-        top: 464px;
-        padding: 29px;
-    }
 }
+
+
+@media (min-width: 1000px) {
+
+.buttonAdd {
+    right: 50px;
+    top: 500px;
+    padding: 29px;
+}}
+
+
+@media (min-width: 1920px) {
+
+    .buttonAdd {
+        right: 66px;
+        top: 929px;
+        padding: 35px;
+    }}

@@ -12,7 +12,6 @@ label,
 }
 
 .inp-class {
-    /* background-color: #ECECEC; */
     height: 45px;
     width: 100%;
     padding: 0px 0px 0px 17px;
@@ -20,10 +19,6 @@ label,
     border: 1px solid #3F3B51;
     outline: none;
 }
-/* 
-.inp-class:optional:valid{
-    border: 1px solid red;
-} */
 
 #messageError {
     color: rgb(211, 0, 0);
