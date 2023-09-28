@@ -1,5 +1,5 @@
-import { collection, query, addDoc, doc, updateDoc } from 'firebase/firestore'
-// updateDoc, doc, deleteDoc,  
+import { collection, query, addDoc, doc, updateDoc, deleteDoc } from 'firebase/firestore'
+// doc,
 import { signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from './firebase';
 
@@ -33,28 +33,31 @@ const firebase = () => {
                 userEmail: auth.currentUser.email,
                 date: new Date().toLocaleString(),
             });
-
+            console.log("fecha que se agrega.", new Date().toLocaleString());
             console.log("Documento agregado con éxito.", userEmail);
         } else {
             console.log("El usuario no está autenticado. No se puede publicar el post.");
         }
     };
 
-    // // Editar post
+    // Editar post
 
     const editNote = (id, postText) => {
         const postRef = doc(db, 'posts', `${id}`);
         updateDoc(postRef, {
             title: postText.title,
             text: postText.text,
+            date: new Date().toLocaleString()
         });
     };
+    // Eliminar post
 
-    // // Eliminar post
+    const deleteDocData = (id) => {
+        deleteDoc(doc(db, 'posts', `${id}`));
+    };
 
-    // const deleteDocData = (id) => {
-    //     deleteDoc(doc(db, 'posts', `${id}`));
-    // };
+
+
 
     // // Dar Like
     // const like = (id, email) => {
@@ -81,8 +84,8 @@ const firebase = () => {
         ref,
         post,
         colPost,
-        editNote
-        // deleteDocData,
+        editNote,
+        deleteDocData,
         // like,
         // disLike
     }

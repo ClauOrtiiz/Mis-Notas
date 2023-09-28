@@ -2,7 +2,7 @@
     overflow: hidden;
     background-color: #fbfbfb;
     width: 89%;
-    max-width: 797px;
+    max-width: 880px;
     border-radius: 20px;
     display: flex;
     flex-direction: row-reverse;
@@ -12,7 +12,7 @@
 .create-form {
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 24px;
     width: 100%;
     padding: 20px 30px;
 }

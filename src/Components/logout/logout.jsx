@@ -17,10 +17,10 @@ const Logout = () => {
 
     return (
 
-            <div className='logout-container' onClick={handleClicklogout}>
-                <img src={Exit} className='logout-img' alt="logo" />
-                <p className='logout-text'>Salir</p>
-            </div>
+        <div className='logout-container' onClick={handleClicklogout}>
+            <img src={Exit} className='logout-img' alt="logo" />
+            <p className='logout-text'>Salir</p>
+        </div>
     );
 };
 

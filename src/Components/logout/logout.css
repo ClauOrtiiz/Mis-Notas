@@ -1,18 +1,27 @@
-.logout-container{
+.logout-container {
     display: flex;
     padding-top: 10px;
     flex-direction: column;
     gap: 6px;
-    margin: 9px 0 -51px 0
+    margin: 8px 1px -51px 0
 }
 
 .logout-img {
-    width: 31px;
+    width: 33px;
     margin-right: 20px;
 }
 
-.logout-text{
+.logout-text {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0px 0px 0px -8px;
+}
+
+@media (min-width: 926px) {
+.logout-container {
+margin: 16px 12px -51px 0
+}
+.logout-img {
+    width: 39px;
+}
 }

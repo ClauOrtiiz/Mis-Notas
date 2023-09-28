@@ -2,20 +2,21 @@
     overflow: hidden;
     background-color: #fbfbfb;
     width: 89%;
-    max-width: 797px;
+    max-width: 880px;
     border-radius: 20px;
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 13px;
+    margin-top: 62px;
 }
 
 .loginform-form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
     width: 100%;
     padding: 20px 30px;
 }
+
 .init-text {
     color: black;
     font-size: 1.5rem;
@@ -25,6 +26,7 @@
     display: flex;
     justify-content: center;
 }
+
 .btn-google {
     background-color: #26CD91;
     padding: 5px;

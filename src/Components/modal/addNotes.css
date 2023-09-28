@@ -16,7 +16,8 @@
     font-weight: bold;
     border-radius: 15px;
     width: 87%;
-    max-width: 900px;;
+    max-width: 900px;
+    ;
     height: 63%;
     display: flex;
     position: relative;
@@ -76,9 +77,9 @@
     font-size: 1rem;
 }
 
-.text-new{
+.text-new {
     border-radius: 7px;
     padding: 8px;
     border: none;
-    font-size: 1rem; 
+    font-size: 1rem;
 }
