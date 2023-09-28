@@ -2,17 +2,17 @@
     overflow: hidden;
     background-color: #fbfbfb;
     width: 89%;
-    max-width: 880px;
+    max-width: 711px;
     border-radius: 20px;
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 62px;
+    margin-top: 20px;
 }
 
 .loginform-form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 10px;
     width: 100%;
     padding: 20px 30px;
 }
