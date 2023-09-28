@@ -2,8 +2,8 @@
 import './init.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import LogoMisNotas from '../../Components/logo/logo.jsx';
-import firebase from '../../firebase-client/auth.jsx';
+import LogoMisNotas from '../../Components/logo/logo';
+import firebase from '../../firebase-client/auth';
 import LoginForm from '../../Components/loginForm/loginForm';
 
 
