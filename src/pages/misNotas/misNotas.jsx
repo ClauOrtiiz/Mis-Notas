@@ -1,33 +1,47 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import Logout from '../../Components/logout/logout';
-import Logo from '../../Components/logo/logo';
-import Plus from '../../assets/plus.png';
-import ModalAddNotes from '../../Components/modal/addNotes';
-import CardNotes from '../../Components/card/cardNotes';
 import firebase from '../../firebase-client/auth';
 import { onSnapshot } from 'firebase/firestore'
 import 'firebase/firestore';
+import ModalDelete from '../../Components/modal/delete';
+import ModalEdit from '../../Components/modal/edit';
+import ModalAddNotes from '../../Components/modal/addNotes';
+import CardNotes from '../../Components/card/cardNotes';
+import Logout from '../../Components/logout/logout';
+import Logo from '../../Components/logo/logo';
+import Plus from '../../assets/plus.png';
 import './misNotas.css';
 
-
 const notes = () => {
+
     const [showModalAddNotes, setShowModalAddNotes] = useState(false);
+    const [showModalEdit, setShowModalEdit] = useState(false);
+    const [showModalDelete, setShowModalDelete] = useState(false);
+    const [selectedId, setSelectedId] = useState(null);
+
+
+    //modales  
     const handleClickModalAddNotes = () => {
         setShowModalAddNotes(true);
     }
-
+    const handleClickModalDelete = (id) => () => {
+        setShowModalDelete(true);
+        setSelectedId(id);
+    }
+    const handleClickModalEdit = (id) => () => {
+        setShowModalEdit(true);
+        setSelectedId(id);
+    }
     const cancel = () => {
         setShowModalAddNotes(false);
+        setShowModalDelete(false);
+        setShowModalEdit(false);
     }
 
-
+    //mostrar notas existentes 
     const [existingNotes, setExistingNotes] = useState([]);
-
     useEffect(() => {
-        console.log('aqui');
         onSnapshot(firebase().ref(), (snapshot) => {
             const data = [];
             snapshot.forEach((doc) => {
@@ -37,6 +51,24 @@ const notes = () => {
         });
     }, []);
 
+    console.log('existengNotes:', existingNotes);
+
+    // elimnar nota 
+    const handleClickDelete = (e) => {
+        e.preventDefault();
+        try {
+            if (selectedId) {
+                firebase().deleteDocData(selectedId);
+                console.log('Producto se eliminó correctamente');
+                cancel();
+            } else {
+                console.log('No hay un ID válido seleccionado para eliminar');
+            }
+        } catch (error) {
+            console.log('Error en la solicitud de eliminación del producto:', error);
+            throw error;
+        }
+    }
 
 
     return (
@@ -51,7 +83,9 @@ const notes = () => {
             </main>
             {showModalAddNotes && <ModalAddNotes cancel={cancel} />}
 
-            <CardNotes notes={existingNotes}></CardNotes>
+            <CardNotes notes={existingNotes} clickModalDelete={handleClickModalDelete} clickModalEdit={handleClickModalEdit}></CardNotes>
+            {showModalDelete && <ModalDelete handleClickDelete={handleClickDelete} cancel={cancel} />}
+            {showModalEdit && <ModalEdit notes={existingNotes.find(note => note.id === selectedId)} cancel={cancel} />}
         </ div>
     );
 };
