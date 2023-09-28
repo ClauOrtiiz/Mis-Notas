@@ -1,5 +1,5 @@
 .init-container {
-    background-image: url(src/assets/fondo.png);
+    background-image: url(../../assets/fondo.png);
     height: 100vh;
     display: flex;
     background-size: cover;
@@ -44,7 +44,7 @@
 @media (min-width: 926px) {
 
     .init-container {
-        background-image: url(src/assets/desktop.png);
+        background-image: url(../../assets/desktop.png);
     }
     
 }

@@ -1,5 +1,5 @@
 .register-container {
-    background-image: url(src/assets/fondo.png);
+    background-image: url(../../assets/fondo.png);
     /* background-color: #3F3B51; */
     height: 100vh;
     display: flex;
@@ -44,6 +44,6 @@
 @media (min-width: 926px) {
 
     .register-container {
-        background-image: url(src/assets/desktop.png);
+        background-image: url(../../assets/desktop.png);
     }
 }
