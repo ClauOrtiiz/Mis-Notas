@@ -15,6 +15,6 @@ En el dinámico universo del desarrollo web, la ejecución de proyectos es una t
 
 En este proyecto, desarrollé una aplicación de toma de notas con capacidades de crear, editar, eliminar y consultar en cualquier momento. Siempre surge la necesidad de registrar información importante como direcciones, números de teléfono o notas de reuniones, así como guardar URLs para futuras referencias. Sin embargo, a menudo utilizamos libretas o agendas que se olvidan o anotamos de manera dispersa, perdiendo la prioridad y el propósito de la nota.
 
-![MisNotasVistas]('./src/assets/readme02')
+![MisNotasVistas](/src/assets/readme02)
 
 El objetivo principal de este proyecto fue aprender a construir una interfaz web utilizando el framework que elegí, React. Todos los frameworks de Frontend se enfrentan al desafío de mantener sincronizados el estado y la interfaz. Esta experiencia me permitió familiarizarme con el concepto de "estado de pantalla" y cómo cada cambio en el estado se refleja en la interfaz. Por ejemplo, al agregar una nota, la interfaz se actualiza automáticamente para reflejar la inclusión de la nueva entrada en la lista de notas.
