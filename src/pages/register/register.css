@@ -1,6 +1,5 @@
 .register-container {
     background-image: url(../../assets/fondo.png);
-    /* background-color: #3F3B51; */
     min-height: 100vh;
     display: flex;
     background-size: cover;

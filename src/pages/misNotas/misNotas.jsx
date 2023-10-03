@@ -51,7 +51,6 @@ const notes = () => {
         });
     }, []);
 
-    console.log('existengNotes:', existingNotes);
 
     // elimnar nota 
     const handleClickDelete = (e) => {

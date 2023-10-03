@@ -33,7 +33,6 @@ const Register = () => {
             }
 
         } catch (err) {
-            // console.log(err)
             setErrorMessage('Oops, it is incorrect. Please try again');
         }
     };
