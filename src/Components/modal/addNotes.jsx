@@ -8,7 +8,6 @@ const addNotes = ({ cancel }) => {
 
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
-    // const [existingNotes, setExistingNotes] = useState([]);
 
     const handleClick = async (e) => {
         e.preventDefault();
@@ -16,7 +15,6 @@ const addNotes = ({ cancel }) => {
             try {
                 firebase().post({ title, text });
                 cancel();
-                console.log('se guardo la nota correctamente');
             } catch (e) {
                 console.log('Error al guardar nota', e)
             }

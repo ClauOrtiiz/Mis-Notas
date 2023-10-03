@@ -24,7 +24,6 @@ const ModalEditProduct = ({ cancel, notes }) => {
         });
         cancel();
     }
-    console.log('el texto es: ', text)
 
     return (
         <section className="modal-content-global">

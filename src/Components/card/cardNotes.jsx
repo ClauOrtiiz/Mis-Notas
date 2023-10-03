@@ -1,10 +1,10 @@
 import '../card/cardNotes.css';
 import IconEdit from '../../assets/edit.png';
 import IconDelete from '../../assets/delete.png';
-
+// Trunca el título y agrega "..." al final
 const truncateTitle = (title) => {
     if (title.length > 25) {
-        return title.slice(0, 25) + '...'; // Trunca el título y agrega "..." al final
+        return title.slice(0, 25) + '...'; 
     }
     return title;
 };
