@@ -1,4 +1,4 @@
-![MisNotas]('/src/assets/readme01')
+![MisNotas]('C:\Users\Claudia\Desktop\proyectos\Mis-Notas\src\assets\readme01.png')
 
 ## Índice
 
