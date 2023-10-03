@@ -1,4 +1,4 @@
-![MisNotas]('src\assets\readme01.png')
+![MisNotas]('src/assets/readme01.png')
 
 ## Índice
 
