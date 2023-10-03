@@ -40,7 +40,7 @@ const ModalEditProduct = ({ cancel, notes }) => {
                     </div>
                     <div className='item' >
                         <label>Nota:</label>
-                        <textarea cols="25" wrap="off" rows="25" className="inp-text" type="text" value={text} onChange={(e) => setText(e.target.value)} />
+                        <textarea cols="25" rows="25" className="inp-text" type="text" value={text} onChange={(e) => setText(e.target.value)} />
                     </div>
                     <input type="submit" className="btn-save-edit" value="Guardar" />
                 </form>

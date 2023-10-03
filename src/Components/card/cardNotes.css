@@ -1,20 +1,26 @@
 .card-notes {
-    width: 80%;
-    max-width: 537px;
+    padding-top: 15px;
     display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    overflow: auto;
+    width: 90%;
+    max-width: 900px;
+    margin-bottom: 33px;
 }
 
 .card-notes-container {
-    font-size: 25px;
-    margin-bottom: 20px;
-    display: grid;
-    row-gap: 10px;
+    flex: 2 2 221px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 13px;
     background-color: white;
     border-radius: 10px;
-    padding: 7px;
     box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25);
+    max-height: 139px; /* Cambia este valor según sea necesario */
+    overflow: hidden;
 }
 
 .card-notes-container:hover {
@@ -24,7 +30,7 @@
 .container-btns {
     display: flex;
     justify-content: flex-end;
-    margin-right: 0px;
+    margin-right: -15px;
     gap: 2px;
 }
 
@@ -56,18 +62,29 @@
 
 .card-notes-title {
     font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .card-notes-text {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    max-height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 /* Cambia desde 498px en adelante */
 @media (min-width: 498px) {
     .card-notes {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-notes-container {
+    flex: 2 2 300px;
     }
     .btn-edit {
         width: 40px;
@@ -76,6 +93,7 @@
     .btn-delete {
         width: 60px;
     }
-
-
+    .card-notes-text {
+    font-size: 1.15rem;
+}
 }
