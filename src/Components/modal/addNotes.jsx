@@ -40,7 +40,7 @@ const addNotes = ({ cancel }) => {
 
                     <input className='title-add' type="text" name="" id="inp-title" placeholder='Titulo' onChange={(e) => setTitle(e.target.value)} ></input>
 
-                    <textarea className='text-new' name="textarea" id="" cols="52" rows="10" placeholder='Empiece a escribir' onChange={(e) => setText(e.target.value)} ></textarea>
+                    <textarea className='text-new' name="textarea" cols="52" rows="10" placeholder='Empiece a escribir' onChange={(e) => setText(e.target.value)} ></textarea>
 
                     <div className='btn-save-item'>
                         <button className='btn-save'  type="onSubmit" >Guardar </button>
