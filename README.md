@@ -1,4 +1,4 @@
-![MisNotas]('../../assets/readme01')
+![MisNotas]('../../assets/readme01.png')
 
 ## Índice
 
